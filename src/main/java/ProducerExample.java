@@ -3,6 +3,7 @@ import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
 
+
 import java.util.Properties;
 
 public class ProducerExample {
@@ -36,6 +37,7 @@ public class ProducerExample {
 
         try {
             RecordMetadata metadata = (RecordMetadata) producer.send(record).get();
+            
             System.out.println(metadata.topic() + ";" + metadata.offset());
 
 
